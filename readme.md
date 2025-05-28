@@ -1,8 +1,6 @@
 # Setting Up Network-wide Cloudflare WARP on MikroTik using WireGuard
 
----
-
-This guide details the process of configuring a MikroTik router to utilize Cloudflare WARP across an entire network, leveraging the speed and security benefits of WireGuard. By creating a WireGuard tunnel to Cloudflare's WARP service, all devices connected to the MikroTik router can have their traffic routed through Cloudflare's network, enhancing privacy and potentially improving connection speeds. This setup is particularly useful for users seeking a simple, centralized solution for protecting their entire home or small office network. Assuming you did a basic configuration to your MikroTik router, follow these steps:
+This guide details the process of configuring a MikroTik router to utilize Cloudflare WARP across an entire network, leveraging the speed and security benefits of WireGuard. By creating a WireGuard tunnel to Cloudflare's WARP service, all devices connected to the MikroTik router can have their traffic routed through Cloudflare's network, enhancing privacy and potentially improving connection speeds. This setup is particularly useful for users seeking a simple, centralized solution for protecting your entire home or bypassing DPI (Deep Packet Inspection). Assuming you did a basic configuration to your MikroTik router, follow these steps:
 
 
 > [!WARNING]
@@ -10,7 +8,7 @@ This guide details the process of configuring a MikroTik router to utilize Cloud
 > WireGuard is only supported on RouterOS v7 on ARM and x86
 ## 1. Create a WireGuard profile
 
-To create a WireGuard profile, you need to download [wgcf](https://github.com/ViRb3/wgcf/releases). Go to releases, and then choose the appropriate file format and architecture. You will most likely download the `amd64` version, as it is the most commonly used architecture on PCs.
+To create a WireGuard profile, you need to download [wgcf](https://github.com/ViRb3/wgcf/releases). Go to releases, and then choose the appropriate file format and architecture. You will most likely download the `amd64` version, as it is the most commonly used architecture on PCs. Also rename the downloaded file to `wgcf` just to make things little bit easier and make it executable.
 
 To create a WireGuard profile, you must register a new account with following command:
 
