@@ -75,9 +75,9 @@ Lastly, add a route using the WARP routing table:
 	add disabled=no dst-address=0.0.0.0/0 gateway=wg1 routing-table=WARP \
     suppress-hw-offload=no
 
-Setup is complete. The last thing to do is checking the WARP status by:
+Setup is complete. The last thing to do is checking the WARP status on your network device by:
 
-	 /tool fetch url=https://1.1.1.1/cdn-cgi/trace output=user
+	 curl https://1.1.1.1/cdn-cgi/trace
 
 search for `warp=on` on the terminal output.
 
