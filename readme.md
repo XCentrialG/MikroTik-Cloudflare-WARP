@@ -6,6 +6,7 @@ This guide details the process of configuring a MikroTik router to utilize Cloud
 > [!WARNING]
 > ### DISCLAIMER:
 > WireGuard is only supported on RouterOS v7 on ARM and x86
+
 ## 1. Create a WireGuard profile
 
 To create a WireGuard profile, you need to download [wgcf](https://github.com/ViRb3/wgcf/releases). Go to releases, and then choose the appropriate file format and architecture. You will most likely download the `amd64` version, as it is the most commonly used architecture on PCs. Also rename the downloaded file to `wgcf` just to make things little bit easier and make it executable.
@@ -62,7 +63,7 @@ Add mangle firewall for the new routing table.
     src-address=<your ip dhcp pool>
 
 > [!NOTE]
-Exclude your MikroTik's ip address from the pool (e.g. 192.168.1.2-192.168.1.254 where 192.168.1.1 is your router)
+Exclude your MikroTik's IP Address from the pool (e.g. 192.168.1.2-192.168.1.254 where 192.168.1.1 is your router)
 
 Add NAT Masquerading.
 
